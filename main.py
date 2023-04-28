@@ -51,7 +51,7 @@ class AddCafeForm(FlaskForm):
 
 @app.route("/")
 def home():
-    all_cafes = Cafe.query.order_by(Cafe.id).all()
+    all_cafes = Cafe.query.all()
     db.session.commit()
     return render_template("index.html", cafes=all_cafes)
 
