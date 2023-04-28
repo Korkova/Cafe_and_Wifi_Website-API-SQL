@@ -7,10 +7,10 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 import os
 
-WTF_CSRF_SECRET_KEY=os.environ.get('CSRF_KEY')
+#WTF_CSRF_SECRET_KEY=os.environ.get('CSRF_KEY')
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
+app.config['SECRET_KEY'] = os.environ.get("CSRF_KEY")
 csrf = CSRFProtect(app)
 Bootstrap(app)
 
