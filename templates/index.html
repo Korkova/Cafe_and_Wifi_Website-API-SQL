@@ -52,10 +52,11 @@
           {% endif %}
         </div>
         <div class="title">{{cafe.name}}</div>
-          <p class="loc">{{cafe.location}}</p>
-          <p class="ikona"><i class="fa-sharp fa-solid fa-mug-hot"></i>   {{cafe.coffee_price}}</p>
-          <p class="ikona"><i class="fa-sharp fa-solid fa-chair"></i>    {{cafe.seats}}</p>
-
+          <a class="loc" href={{cafe.map_url}}>{{cafe.location}}</a>
+          <div class="ikony">
+            <p class="ikona"><i class="fa-sharp fa-solid fa-mug-hot"></i>   {{cafe.coffee_price}}</p>
+            <p class="ikona"><i class="fa-sharp fa-solid fa-chair"></i>    {{cafe.seats}}</p>
+          </div>
         <div>
         {% if cafe.has_wifi: %}
           <p class="ikona"><i class="fa-solid fa-wifi"></i></p>
@@ -67,18 +68,14 @@
           <p class="ikona"><i class="fa-solid fa-music"></i></p>
         {% endif %}
         </div>
-
-
-
-<!--        <a href=""></a>-->
-<!--          <p class="overview">{{cafe.map_url}}</p>-->
       </div>
     </div>
   </div>
 {% endfor %}
 </div>
 </div>
-
+<br>
+<br>
 {% endblock %}
 
 

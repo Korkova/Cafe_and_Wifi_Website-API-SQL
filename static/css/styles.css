@@ -266,7 +266,11 @@
     color: #E4BB23;
 }
 .loc {
-    margin-bottom: 2rem;
+    color: black;
+}
+
+.ikony {
+   margin-top: 2rem;
 }
 
 #link {
