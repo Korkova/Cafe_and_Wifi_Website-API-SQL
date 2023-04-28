@@ -15,26 +15,26 @@ csrf = CSRFProtect(app)
 Bootstrap(app)
 
 ##Connect to Database
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///cafes.db"
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
+#app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///cafes.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 # Create Table
-# with app.app_context():
-class Cafe(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(250), unique=True, nullable=False)
-    map_url = db.Column(db.String(500), nullable=False)
-    img_url = db.Column(db.String(500), nullable=False)
-    location = db.Column(db.String(250), nullable=False)
-    seats = db.Column(db.String(250), nullable=False)
-    rating = db.Column(db.Integer, nullable=False)
-    has_wifi = db.Column(db.Boolean, nullable=False)
-    has_sockets = db.Column(db.Boolean, nullable=False)
-    loud_music = db.Column(db.Boolean, nullable=False)
-    coffee_price = db.Column(db.String(250), nullable=True)
-# db.create_all()
+with app.app_context():
+    class Cafe(db.Model):
+        id = db.Column(db.Integer, primary_key=True)
+        name = db.Column(db.String(250), unique=True, nullable=False)
+        map_url = db.Column(db.String(500), nullable=False)
+        img_url = db.Column(db.String(500), nullable=False)
+        location = db.Column(db.String(250), nullable=False)
+        seats = db.Column(db.String(250), nullable=False)
+        rating = db.Column(db.Integer, nullable=False)
+        has_wifi = db.Column(db.Boolean, nullable=False)
+        has_sockets = db.Column(db.Boolean, nullable=False)
+        loud_music = db.Column(db.Boolean, nullable=False)
+        coffee_price = db.Column(db.String(250), nullable=True)
+    db.create_all()
 
 class AddCafeForm(FlaskForm):
     name = StringField("Cafe Name", validators=[DataRequired()])
