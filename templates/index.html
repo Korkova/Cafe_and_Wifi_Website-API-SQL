@@ -1,27 +1,25 @@
+{% include "header.html" %}
 {% extends 'bootstrap/base.html' %}
 
-{% block styles %}
+*{% block styles %}
   {{ super() }}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-          integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-          crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   <script src="https://kit.fontawesome.com/d8eba526f2.js" crossorigin="anonymous"></script>
-{% endblock %}
+{% endblock %}*
 
 {% block title %}Cafes in the town{% endblock %}
 
 {% block content %}
 <div class="container">
-  <h1 class="heading">Cafés in Bratislava</h1>
-  <p class="description">Here you get the best cup of coffee.</p>
+  <h2 class="description">Here you get the best cup of coffee...</h2>
 
   <div class="container text-right add">
     <a id="link" href="{{ url_for('add_cafe') }}" class="button">Add Cafe</a>
   </div>
+  <hr>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
 {% for cafe in cafes %}
@@ -32,41 +30,41 @@
     <div class="back">
       <div>
         <div class="rating">
-          {% if cafe.rating==5: %}
+          {% if cafe.rating=='5/5': %}
           <i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i>
           {% endif %}
-          {% if cafe.rating==4: %}
+          {% if cafe.rating=='4/5': %}
           <i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fa-regular fa-star star"></i>
           {% endif %}
-          {% if cafe.rating==3: %}
+          {% if cafe.rating=='3/5': %}
           <i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fa-regular fa-star star"></i><i class="fa-regular fa-star star"></i>
           {% endif %}
-          {% if cafe.rating==2: %}
+          {% if cafe.rating=='2/5': %}
           <i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fa-regular fa-star star"></i><i class="fa-regular fa-star star"></i><i class="fa-regular fa-star star"></i>
           {% endif %}
-          {% if cafe.rating==1: %}
+          {% if cafe.rating=='1/5': %}
           <i class="fas fa-star star"></i><i class="fa-regular fa-star star"></i><i class="fa-regular fa-star star"></i><i class="fa-regular fa-star star"></i><i class="fa-regular fa-star star"></i>
-          {% endif %}
-          {% if cafe.rating==0: %}
-          <i class="fa-regular fa-star star"></i><i class="fa-regular fa-star star"></i><i class="fa-regular fa-star star"></i><i class="fa-regular fa-star star"></i><i class="fa-regular fa-star star"></i>
           {% endif %}
         </div>
         <div class="title">{{cafe.name}}</div>
           <a class="loc" href={{cafe.map_url}}>{{cafe.location}}</a>
-          <div class="ikony">
-            <p class="ikona"><i class="fa-sharp fa-solid fa-mug-hot"></i>   {{cafe.coffee_price}}</p>
-            <p class="ikona"><i class="fa-sharp fa-solid fa-chair"></i>    {{cafe.seats}}</p>
+          <div class="ikona">
+            <p><i class="fa-sharp fa-solid fa-mug-hot"></i>   {{cafe.coffee_price}}</p>
+            <p><i class="fa-sharp fa-solid fa-chair"></i>    {{cafe.seats}}</p>
           </div>
         <div>
-        {% if cafe.has_wifi: %}
-          <p class="ikona"><i class="fa-solid fa-wifi"></i></p>
+        {% if cafe.has_wifi=='Yes': %}
+          <p><i class="fa-solid fa-wifi"></i></p>
         {% endif %}
-        {% if cafe.has_sockets: %}
-          <p class="ikona"><i class="fa-sharp fa-solid fa-plug"></i></p>
+        {% if cafe.has_sockets=='Yes': %}
+          <p><i class="fa-sharp fa-solid fa-plug"></i></p>
         {% endif %}
-        {% if cafe.loud_music: %}
-          <p class="ikona"><i class="fa-solid fa-music"></i></p>
+        {% if cafe.loud_music=='Yes': %}
+          <p><i class="fa-solid fa-music"></i></p>
         {% endif %}
+        </div>
+        <div id="delete-item">
+        <a href="{{url_for('delete_cafe', cafe_id=cafe.id) }}">delete</a>
         </div>
       </div>
     </div>
@@ -74,8 +72,11 @@
 {% endfor %}
 </div>
 </div>
+
 <br>
 <br>
+{% include "footer.html" %}
 {% endblock %}
+
 
 
