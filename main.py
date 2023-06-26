@@ -8,7 +8,6 @@ from wtforms.validators import DataRequired, URL
 import os
 
 #WTF_CSRF_SECRET_KEY=os.environ.get('CSRF_KEY')
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("CSRF_KEY")
 csrf = CSRFProtect(app)
