@@ -164,7 +164,7 @@ h1 {
 	 perspective: 1000px;
 	 margin: 1rem auto;
 	 position: relative;
-	 margin: 2.5%;
+	 /*margin: 2.5%;*/
 }
 
  .front, .back {
@@ -393,13 +393,23 @@ h1 {
 
 
 /* Media*/
-/*
- @media screen and (max-width: 800px) {
+
+ @media (max-width: 425px) {
 	 .card {
 		 width: calc(50% - 3rem);
 	}
 }
- @media screen and (max-width: 500px) {
+
+ @media (min-width: 426px) {
+	 .card {
+		 margin: 2.5%;
+	}
+}
+
+
+
+/*
+ @media (max-width: 500px) {
 	 .card {
 		 width: 100%;
 	}
