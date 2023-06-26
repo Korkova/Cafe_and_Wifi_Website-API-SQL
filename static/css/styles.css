@@ -378,16 +378,19 @@ h1 {
 }
 
 /* Media */
-/* Large*/
-/*
+/* Large */
+/* Small */
+@media (max-width: 768px) {
 
-@media (max-width: 1025px) {
+ .site-heading {
+    font-size: 4rem;
+ }
 
-.site-heading {
-    font-size: 10rem;
+ .h1 {
+  font-size: 4rem;
 }
 }
-*/
+
 
 
 
