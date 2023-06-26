@@ -95,7 +95,7 @@ h1 {
 }
 
 .container {
-    padding:  4% 10%;
+    padding:  0% 10%;
 }
 
 
@@ -377,6 +377,15 @@ h1 {
    margin-top: 2rem;
 }
 
+/* Media */
+/* Large*/
+
+@media (min-width: 1025px) {
+
+.site-heading {
+    font-size: 12rem;
+}
+}
 
 
 
