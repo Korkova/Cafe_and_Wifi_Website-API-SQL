@@ -374,8 +374,8 @@ h1 {
   font-size: 4rem;
 }
   .row {
-    margin-right: -15px;
-    /* margin-left: -15px; */
+    margin-right: 0px;
+    margin-left: 0px;
 }
 }
 
