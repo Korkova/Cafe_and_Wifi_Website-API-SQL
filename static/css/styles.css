@@ -377,7 +377,10 @@ h1 {
     margin-right: 0px;
     margin-left: 0px;
 }
-}
+
+ .container-navbar {
+ dislplay: none;
+ }
 
  header {
  padding-top: 1.5rem;
