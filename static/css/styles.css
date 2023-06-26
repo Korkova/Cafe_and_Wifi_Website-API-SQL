@@ -65,7 +65,7 @@ footer {
   line-height: 1;
   font-family: 'Grandiflora One', serif;
   /*font-weight: 400;*/
-  font-size: 10rem;
+  font-size: 14rem;
   font-weight: 300;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
@@ -380,10 +380,10 @@ h1 {
 /* Media */
 /* Large*/
 
-@media (min-width: 1025px) {
+@media (max-width: 1025px) {
 
 .site-heading {
-    font-size: 12rem;
+    font-size: 10rem;
 }
 }
 
