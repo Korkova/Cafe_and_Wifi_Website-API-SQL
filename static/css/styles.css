@@ -146,9 +146,10 @@ h1 {
 
 /* CARDS */
 
-/* .row>* {
+.row>* {
   padding-left: 0;
-  }*/
+  }
+
 
 .card-name {
      font-size: 3rem;
@@ -211,8 +212,13 @@ h1 {
  .back {
 	 background: #fff;
 	 transform: rotateY(-180deg);
-	 padding: 0 2em;
+     padding: 0 2em;
+
 }
+.back-in-column {
+    padding: 0 2em;
+}
+
  .card:hover .back {
 	 transform: rotateY(0deg);
 }
