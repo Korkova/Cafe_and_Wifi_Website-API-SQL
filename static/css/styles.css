@@ -54,7 +54,7 @@ footer {
 .nav-link {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #4D4637;
   padding: 2px 18px;
 }
@@ -81,7 +81,7 @@ h1 {
 
 /*.heading*/
  .description {
-	 font-size: 1.5rem;
+	 font-size: 2rem;
 	 letter-spacing: 0.1ch;
 	 line-height: 1;
 	 padding-top: 0.5rem;
