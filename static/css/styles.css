@@ -7,7 +7,6 @@
  	 font-weight: 300;
 	 color: #4D4637;
 	 line-height: 1.5;
-	 /*font-size: 21px*/
 }
 
 header {
@@ -382,13 +381,14 @@ h1 {
 /* Small */
 @media (max-width: 768px) {
 
- .site-heading {
-    font-size: 4rem;
- }
-
  h1 {
   font-size: 4rem;
 }
+
+ header {
+ padding-top: 1.5rem;
+ }
+
 }
 
 
