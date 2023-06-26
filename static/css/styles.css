@@ -52,8 +52,8 @@ footer {
 }
 
 .nav-link {
-  /*font-family: 'Poppins', sans-serif;
-  font-weight: 300;*/
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   color: #4D4637;
   padding: 2px 18px;
@@ -91,6 +91,7 @@ h1 {
 	 text-align: center;
 	 color: #4D4637;
 	 font-family: 'Poppins', sans-serif;
+	 font-weight: 500;
 }
 
 /*
@@ -184,10 +185,10 @@ h1 {
 	 background-size: cover;
 	 padding: 2rem;
 	 /*font-size: 1.618rem;*/
-	 font-weight: 600;
 	 color: #fff;
 	 overflow: hidden;
 	 font-family: Poppins, sans-serif;
+	 font-weight: 600;
 }
  .front:before {
 	 position: absolute;
