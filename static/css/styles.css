@@ -373,6 +373,11 @@ h1 {
  h1 {
   font-size: 4rem;
 }
+  .row {
+    margin-right: -15px;
+    /* margin-left: -15px; */
+}
+}
 
  header {
  padding-top: 1.5rem;
